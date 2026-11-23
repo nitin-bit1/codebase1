@@ -3,6 +3,7 @@ import cors from '@fastify/cors';
 import fastifyRedis from '@fastify/redis';
 import { config } from './src/config.js';
 import healthRoutes from './src/routes/health.js';
+import hubRoutes from './src/routes/hub.js';
 import runtimeRoutes from './src/routes/runtime.js';
 
 const app = Fastify({ logger: true });
@@ -11,10 +12,11 @@ await app.register(cors);
 await app.register(fastifyRedis, { url: config.redisUrl });
 
 await app.register(healthRoutes);
+await app.register(hubRoutes);
 await app.register(runtimeRoutes);
 
 const closeGracefully = async (signal) => {
-  app.log.info(`Received ${signal}, shutting down Bobbin replica cleanly...`);
+  app.log.info(`Received ${signal}, shutting down replica...`);
   await app.close();
   process.exit(0);
 };
