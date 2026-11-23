@@ -264,3 +264,8 @@ EOF
 
 
 docker compose restart gateway
+
+docker compose down
+
+
+docker compose up -d
