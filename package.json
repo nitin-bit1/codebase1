@@ -1,0 +1,28 @@
+{
+  "name": "codebase1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitin-bit1/codebase1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/nitin-bit1/codebase1/issues"
+  },
+  "homepage": "https://github.com/nitin-bit1/codebase1#readme",
+  "dependencies": {
+    "@fastify/cors": "^11.4.3",
+    "@fastify/redis": "^9.0.1",
+    "fastify": "^5.12.8"
+  }
+}
