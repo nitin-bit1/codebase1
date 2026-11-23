@@ -261,6 +261,9 @@ EOF
 
 
 
+git add .
+git commit -m "wip: checkpoint single-domain path routing before nginx fix"
+git push
 
 
 docker compose restart gateway
